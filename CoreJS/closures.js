@@ -37,3 +37,81 @@ function Parent(name, address, mobile)
 var accessParent = Parent("Adenike", "Texas")
 
 console.log("Parent >> Child: ", accessParent(1234, 'mernstack'));
+
+//student, teacher
+
+// function Student(name, address, studentMobile)
+// {
+//     var password = "pwd";   //private
+//     var age = 123;   //public
+//     var grade = 90; //private
+//     var Teacher = function (teacherMobile, major, isAdmin) {
+
+//         if(isAdmin)
+//         {
+//             return {
+//                 name, 
+//                 age,
+//                 address,
+//                 studentMobile,
+//                 teacherMobile,
+//                 major,
+//                 password,
+//                 grade
+//             }
+//         }
+//         else
+//         {
+//             return {
+//                 name, 
+//                 age,
+//                 address,
+//                 studentMobile,
+//                 teacherMobile,
+//                 major
+//             }
+//         }
+//     }
+
+//     return Teacher;
+// }
+
+//in boolean default is false
+
+var accessStudent = Student("Luke", "1234 home", "123-123-1231")
+
+console.log("Student >> Teacher: ", accessStudent("555-555-5555", "CS", true));
+console.log("Student >> Teacher: ", accessStudent("555-555-5555", "CS", false));
+
+//ternary oerator
+function Student(name, address, studentMobile)
+{
+    var password = "pwd";   //private
+    var age = 123;   //public
+    var grade = 90; //private
+    var Teacher = function (teacherMobile, major, isAdmin) {
+
+        return isAdmin ? {
+                name, 
+                age,
+                address,
+                studentMobile,
+                teacherMobile,
+                major,
+                password,
+                grade
+            }
+            :
+            {
+                name, 
+                age,
+                address,
+                studentMobile,
+                teacherMobile,
+                major
+            }
+        
+    }
+
+    return Teacher;
+}
