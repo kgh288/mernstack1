@@ -22,3 +22,8 @@ myDataType = undefined; // undefined
 console.log("My fifth datatype (no casting) is: ", typeof myDataType); //undefined
 
 
+//Symbol data type:
+
+mySym = Symbol("New value");
+console.log("Symbol", mySym);
+console.log("TypeOf Symbol ", typeof mySym);
