@@ -115,3 +115,28 @@ function Student(name, address, studentMobile)
 
     return Teacher;
 }
+
+function Apartment(street, city, apartmentNum)
+{
+    var owner = "owner name";
+    var monthlyFee = 123;
+    var officeMobile = "111-111-1111";
+    var resident = function(name, mobile) {
+
+        return {
+            street,
+            city,
+            apartmentNum,
+            name,
+            mobile,
+            officeMobile
+        }
+    }
+
+    return resident;
+}
+
+var accessApartment = Apartment("streetName", "San Jose", "603");
+
+console.log("Apartment >> resident", accessApartment("Luke", "123-123-123"));
+

@@ -29,17 +29,60 @@ addNum(1,2);
 
 
 //scope hoding capacity of function
-var funcs = [];
-    for (var i = 0; i < 3; i++) {      // let's create 3 functions
-      funcs[i] = function() {          // and store them in funcs
-        console.log("My value: " + i); // each should log its value.
-      };
-    }
-    for (var j = 0; j < 3; j++) {
-      funcs[j]();                      // and now let's run each one to see
-    }
+//var: functional scope variable
+//let: block scoped
+let funcs = [];
+for (let i = 0; i < 3; i++) {      // let's create 3 functions
+    funcs[i] = function() {          // and store them in funcs
+    console.log("My value: " + i); // each should log its value.
+    };//(i); //test value
+}
 
-    
-    // My value: 3
-    // My value: 3
-    // My value: 3
+(function(i){
+    console.log(i)
+})(5) //test value
+
+for (var j = 0; j < 3; j++) {
+    funcs[j]();                      // and now let's run each one to see
+}
+
+var array = [1,2,3,4,5];
+console.log(array.splice(2)); //it divides the array into after index n and before index n
+console.log(array.splice()); //empty array
+array.push(6);
+array.push(); // nothing happens
+console.log(array);
+
+
+
+var student1 = {
+    name: "luke",
+    session: "mernstack"
+}
+
+var student2 = {
+    name: "Adenike",
+    session: "mernstack"
+}
+
+var arr = [student1, student2];
+
+console.log(arr);
+
+var student3 = {
+    name: "Hung",
+    session: "mernstack"
+}
+arr.push(student3);
+
+console.log(arr);
+
+var arr2 = arr.splice(2); //it divides the array
+
+console.log("spliced by: ",  arr);
+console.log("spliced into: ", arr2);
+
+var arr3 = arr.slice(1); //it only copy the element after the index 
+
+console.log("\n", arr3)
+console.log(arr)

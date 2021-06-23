@@ -31,3 +31,12 @@ function print(a, b, c)
     console.log("2nd print function ", a, b, c)
 }
 
+
+(function (params){
+    console.log(params)
+    global.user= {name:"Hung"}
+    
+})("charlie")
+
+console.log(global.user)
+
