@@ -21,7 +21,7 @@ function A() {
 function name(callBackFunc, nameParam) {
     
     // setTimeout(() => {
-    typeof callBackFunc != undefined ?
+    callBackFunc != undefined ?
         callBackFunc(nameParam)
         :
         "";

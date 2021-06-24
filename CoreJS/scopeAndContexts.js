@@ -67,3 +67,16 @@ var account = {
 //console.log(account.withdraw(50));
 
 //-----------------------------------------------HTML----------
+
+
+
+//html example
+//<button id="newDivBind">Practice Div</button>
+var btn = document.getElementById("newDivBind")
+onclick = function(){alert("The name is - "+ this.name)}
+var user1 = {name:"Luke"}
+btn.addEventListener("click", this.onclick.bind(user1), false) // changing context to user1 upon click
+btn.addEventListener("click", this.onclick, false) //without bind context remains global 
+
+//Event bubbling
+
