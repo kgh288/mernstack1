@@ -43,3 +43,28 @@ console.log(StudentSet.keys())
 
 StudentSet.add("Kim")
 console.log(StudentSet.keys()) // this gets inserted
+
+
+let map1 = new Map(); 
+
+map1.set("key1", "value1");
+map1.set("key2", "value2");
+map1.set("key3", "value3");
+map1.set("key4", "value4");
+
+console.log(map1.entries())
+console.log(map1.get("key1"));
+
+console.log("\n set-----------")
+let set1 = new Set();
+
+set1.add("value1");
+set1.add("value1"); //duplicate, so not added
+set1.add("value2");
+set1.add("value3");
+set1.add("value4");
+set1.delete("value4");
+
+console.log(set1.entries());
+console.log(set1.keys());
+console.log(set1.values());
