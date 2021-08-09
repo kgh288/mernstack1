@@ -347,7 +347,7 @@ optgroup {
   text-transform: uppercase;
   background-color: #046dc9;
   width: auto;
-  height: 75px;
+  /* height: 75px; */
   text-align: center;
   border-top: 2px solid orange;
 }
@@ -378,7 +378,7 @@ optgroup {
   /* background: './images/hm_pic4.jpg' right no-repeat; */
   background-repeat: no-repeat;
   background-position: right;
-  height: 450px;
+  /* height: 450px;          */
   width: auto;
   background-color: #046dc9;
   padding: 5px;  
@@ -3151,3 +3151,36 @@ select.stack {
   margin-right: -6px;
   right: 100%;
   top: 7px; }
+
+
+
+
+  /* Gyeongheun's css */
+.loadSecondHomeBackground {
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 900px;         
+    width: auto;
+    background-color: #046dc9;
+    padding: 5px;  
+    text-align: left;
+    color: #000000;
+    /* border-radius: 50%; */
+}
+.loadSecondHomeBackground ul{
+    padding-top: 10px;
+}
+.loadSecondHomeBackground ul li{
+    color: #fffffff6; 
+}
+.loadSecondHomeBackground ul li:hover{
+    color: #fff; 
+}
+  
+.loadSecondHomeBackground .feature{
+      color:#004b2cf6;
+      padding-bottom: 10px;
+      padding-top: 20px;
+      display: block;
+      padding-left: 21px;
+}

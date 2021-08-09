@@ -11,7 +11,7 @@ router.get("/training", (req, res) => {
     let trainingObj = new TrainingModel(req.query);
     trainingObj.save((err, data)=> {
         if(!err) {
-            res.json(data);
+            res.json(data);         
         }
         else
         {
@@ -44,6 +44,13 @@ router.get("/response", (req, res) => {
     res.send("response printed successfully")
     // res.json(res)
     
+})
+
+router.all("/response", (request, response )=>{
+    console.log("response ===> ", response )
+
+    response.json({'response':'printed successfully'})
+
 })
 
 router.use('/myRoute', myRouter);

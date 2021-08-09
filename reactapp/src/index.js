@@ -3,11 +3,17 @@
 import React from "react";
 import {render} from "react-dom";
 
-import App from "./app/app.js"
+import { Provider } from "react-redux";
+
+
+import App from "./app/app.js";
+import store from "./app/State/store";
 
 render(
-
-    <App/>, //application that would be rendered on single page
+    <Provider store={store}>
+        {/* //application that would be rendered on single page */}
+    <App/> 
+    </Provider>,
     document.getElementById("root") //bootstrapping the application root container
 )
 
